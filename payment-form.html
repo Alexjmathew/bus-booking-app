@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Payment Gateway</h2>
+        
+        <!-- Payment Option Tabs -->
+        <div class="payment-options">
+            <input type="radio" id="card" name="payment-option" checked>
+            <label for="card">Credit/Debit Card</label>
+
+            <input type="radio" id="upi" name="payment-option">
+            <label for="upi">UPI</label>
+
+            <input type="radio" id="wallet" name="payment-option">
+            <label for="wallet">Wallet</label>
+        </div>
+
+        <!-- Card Payment Form -->
+        <form id="card-form" class="payment-form active">
+            <div class="input-group">
+                <label for="cardholder">Cardholder Name</label>
+                <input type="text" id="cardholder" placeholder="John Doe" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="cardnumber">Card Number</label>
+                <input type="text" id="cardnumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+            </div>
+            
+            <div class="flex-row">
+                <div class="input-group">
+                    <label for="expiry">Expiry Date</label>
+                    <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="cvv">CVV</label>
+                    <input type="password" id="cvv" placeholder="123" maxlength="3" required>
+                </div>
+            </div>
+            
+            <button type="submit">Pay Now</button>
+        </form>
+
+        <!-- UPI Payment Form -->
+        <form id="upi-form" class="payment-form">
+            <div class="input-group">
+                <label for="upi-id">UPI ID</label>
+                <input type="text" id="upi-id" placeholder="example@upi" required>
+            </div>
+            <button type="submit">Pay Now</button>
+        </form>
+
+        <!-- Wallet Payment Form -->
+        <form id="wallet-form" class="payment-form">
+            <div class="input-group">
+                <label for="wallet-select">Choose Wallet</label>
+                <select id="wallet-select" required>
+                    <option value="" disabled selected>Select Wallet</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="paytm">Paytm</option>
+                    <option value="phonepe">PhonePe</option>
+                    <option value="amazonpay">Amazon Pay</option>
+                </select>
+            </div>
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

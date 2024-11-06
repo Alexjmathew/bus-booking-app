@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bus Ticket Booking</h1>
+        
+        <div class="map-animation">
+            <div class="bus"></div>
+            <div class="road"></div>
+        </div>
+
+        <form id="booking-form">
+            <label for="start">Starting Point:</label>
+            <select id="start" required>
+                <option value="" disabled selected>Select Starting Point</option>
+                <option value="1">Piravom</option>
+                <option value="2">Palachuvadu</option>
+                <option value="3">Namakuzhy</option>
+                <option value="4">Anthiyal</option>
+                <option value="5">Elanji</option>
+                <option value="6">Mutholapuram</option>
+                <option value="7">Monippally</option>
+                <option value="8">Kuravilangad</option>
+                <option value="9">Vempally</option>
+                <option value="10">Ettumanoor</option>
+            </select>
+
+            <label for="destination">Destination Point:</label>
+            <select id="destination" required>
+                <option value="" disabled selected>Select Destination Point</option>
+                <option value="1">Piravom</option>
+                <option value="2">Palachuvadu</option>
+                <option value="3">Namakuzhy</option>
+                <option value="4">Anthiyal</option>
+                <option value="5">Elanji</option>
+                <option value="6">Mutholapuram</option>
+                <option value="7">Monippally</option>
+                <option value="8">Kuravilangad</option>
+                <option value="9">Vempally</option>
+                <option value="10">Ettumanoor</option>
+            </select>
+
+            <button type="button" onclick="calculateFare()">Calculate Fare</button>
+            <div id="fare-result"></div>
+            <a href="payment-form.html" id="proceed-button" style="display: none;">Proceed to Payment</a>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
